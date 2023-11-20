@@ -1,5 +1,8 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
+let onclick = ()=>{
+	window.localStorage.setItem("token",false)
+}
 </script>
 
 <template>
@@ -8,7 +11,7 @@ import { RouterLink, RouterView } from "vue-router";
       username
       <div class="box">
         <img src="./assets/home/tou.jpg" alt="">
-        <div><p>账号管理</p>|<p>退出</p></div>
+        <div><p>账号管理</p>|<p @click="onclick"><RouterLink to="/login" >退出</RouterLink></p></div>
       </div>
     </div>
     <div class="right">

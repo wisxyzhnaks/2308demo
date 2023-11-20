@@ -7,29 +7,68 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+	  meta:{
+	  	title:"home",
+		type:''
+	  }
     },
     {
       path: '/cart',
       name: 'cart',
-      component: () => import('../views/CartView.vue')
+      component: () => import('../views/CartView.vue'),
+	  meta:{
+	  	title:"cart",
+		type:'login'
+	  }
     },
     {
       path: '/collect',
       name: 'collect',
-      component: () => import('../views/CollectView.vue')
+      component: () => import('../views/CollectView.vue'),
+	  meta:{
+	  	title:"collect",
+		type:''
+	  }
     },
     {
       path: '/sort',
       name: 'sort',
-      component: () => import('../views/SortView.vue')
+      component: () => import('../views/SortView.vue'),
+	  meta:{
+	  	title:"sort",
+		type:''
+	  }
     },
     {
       path: '/shop',
       name: 'shop',
-      component: () => import('../views/ShopView.vue')
-    }
+      component: () => import('../views/ShopView.vue'),
+	  meta:{
+	  	title:"shop",
+		type:''
+	  }
+    },
+	{
+		path:'/produce',
+		name:'produce',
+		component:() => import('../views/ProductDetails.vue'),
+		meta:{
+			title:"produce",
+			type:''
+		}
+	},
+	{
+		path:'/login',
+		name:'login',
+		component:() => import('../views/login.vue'),
+		meta:{
+			title:"login",
+			type:''
+		}
+	}
   ]
 })
+
 
 export default router
